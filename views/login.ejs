@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>login</title>
+</head>
+
+<body>
+    <header class="bg-green">
+        <div class="container flex justify-between">
+            <a href="/">Home</a>
+            <nav>
+                <a href="/users/login"><button class="btn">Login</button></a>
+                <a href="/users/register"><button class="btn">Registration</button></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="bg-green-light ">
+            <div class="container height-90-vh flex justify-center align-center">
+                <div class=" width-40 margin-0-auto pading1-5">
+                    <form action="/users/login" method="post" class="border  flex flex-direction-column pading1-5">
+                        <h1 class="text-center font-1-5 margin-bottom-8px font-weigth-600">Login</h1>
+                        <%if(error){%>
+                            <p class="color-red">
+                                <%=error%>
+                            </p>
+                            <% }%>
+                                <label for="#">Email</label>
+                                <input type="email" name="email" class="font-1-5 margin-bottom-8px" placeholder="email">
+                                <label for="#">Password</label>
+                                <input type="password" name="password" class="font-1-5 margin-bottom-8px"
+                                    placeholder="password">
+
+                                <button class="btn width-40 margin-0-auto" type="submit">login</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
